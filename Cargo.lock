@@ -241,7 +241,7 @@ dependencies = [
 [[package]]
 name = "rs-idle"
 version = "0.1.0"
-source = "git+https://git.codestuff.org/public/rs-idle#26ab019c2611d4783ac26811bfd2af15bb0b6456"
+source = "git+https://git.codestuff.org/public/rs-idle#89a8cad693db87dff3b125b072b8a78429ae9cae"
 dependencies = [
  "x11",
 ]

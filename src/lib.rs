@@ -189,6 +189,11 @@ fn error(error: input::errors::MouseError) -> () {
     println!("{}", error.message());
 }
 
+fn idle_error(error: rs_idle::Error) -> ! {
+    println!("{}", error.message());
+    std::process::exit(1)
+}
+
 pub fn start() {
     let cli::Args { idle_time, mouse_range } = cli::parse_args();
 
@@ -203,7 +208,7 @@ pub fn start() {
     loop {
         sleep(Duration::from_secs(1));
 
-        let idle = rs_idle::get_idle_time();
+        let idle = rs_idle::get_idle_time().unwrap_or_else(|e| { idle_error(e) });
         let mut rng = rand::thread_rng();
         if idle > idle_time * 60 * 1000 {
             let x: i32 = rng.gen_range(-mouse_range..mouse_range);
