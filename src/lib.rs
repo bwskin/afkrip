@@ -151,7 +151,7 @@ pub mod cli {
                     .short('i')
                     .long("idle-time")
                     .action(ArgAction::Set)
-                    .default_value("10")
+                    .default_value("5")
                     .value_parser(ValueParser::new(validators::idle_time)),
             )
             .arg(
