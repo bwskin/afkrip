@@ -193,7 +193,7 @@ pub fn start() {
     let cli::Args { idle_time, mouse_range } = cli::parse_args();
 
     println!("Idle time set to: {} minutes", idle_time);
-    println!("When idle mouse will be moved by {}px in both axes", mouse_range);
+    println!("When idle mouse will be moved by distance between 0 and {}px in both axes", mouse_range);
 
     let mut mouse = match input::Mouse::new() {
         Ok(instance) => instance,
