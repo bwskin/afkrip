@@ -10,4 +10,4 @@ strip = true
 clap = "3.2.22"
 evdev = "0.12.0"
 rand = "0.8.5"
-rs-idle = { git = "https://git.codestuff.org/public/rs-idle", version = "0.1.0" }
+rs-idle = { git = "https://git.hubto.org/public/rs-idle", version = "0.1.0" }
